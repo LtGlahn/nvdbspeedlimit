@@ -62,6 +62,8 @@ Innspecting the element `lokasjon.vegsystemreferanser.strekning` we notice the v
 
 # Finding directions using kjørefelt
 
+![Road network direction](./pics/tollStationLinkSequenceDirection.png)
+
 Using the same examle: [Toll station 906727251 Refnesvegen](https://nvdbapiles-v3.atlas.vegvesen.no/vegobjekter/45/906727251/9.json), we inspect the element `lokasjon.stedfestinger.kjørefelt` and notice that this toll station applies to _kjørefelt = 2, 4_. Looking in the direction of the link sequence, _kjørefelt_ (lane number) with even numbers are positioned to the left of the center line, i.e. for trafick flow in the direction oposite of the link sequence. Even numbers (1,3,5, ...) run in the same direction. In this example, the link sequence runs in the northwesterly direction. Kjørefelt 2, 4 is therefore in the southeasterly direction.  Lowest numbers are always nearest to the center line. 
 
 ![Using kjørefelt information](./pics/tollstationFeltstedfesting.png)
