@@ -86,7 +86,7 @@ Any point at the NVDB road network is uniquely desbribed as linear position at a
 
   * **Link sequence:** An abstract container for road links. A link sequence always start at linear position 0 _(startposisjon=0)_ and ends at linear position 1 _(sluttposisjon=1)_. The link sequence has a start date, but never any termination date. The ID of the link sequence identifies which part of the network we're working on.  
   * **Links:** Pieces of a link sequence. The links themselves have no unique ID, but describe a linear piece of a link sequence in space (between _startposisjon, sluttposisjon_) and time (_startdato, sluttdato_). Undefined _sluttdato_ means that this particular link is not scheduled to be terminated. 
-    * Each link has a geometry, start- and end positions along that particular link sequence, start- and end date, number of linanes and some additional metadata. 
+    * Each link has a geometry, start- and end positions along that particular link sequence, start- and end date, number of lanes _(kjørefelt)_ and some additional metadata. 
   * **Referencing the road network _("stedfesting")_** Any NVDB feature has a reference to at least one link sequence using these non-dimensional linear positions
     * _"relativPosiosjon"_ for points, example `0.91897357@319534`
     * the range _"startposisjon - sluttposisjon"_ for linear segments, example `0-1@319534`
@@ -116,5 +116,8 @@ Short summary of the road network model
   * [NVDB API summary](https://nvdbapiles-v3.atlas.vegvesen.no/dokumentasjon/#retning-p%C3%A5-vegsystemreferanse)
 
 The ultimate guide and reference to NVDB road network: [V830 Nasjonalt vegreferansesystem](https://www.vegvesen.no/globalassets/fag/handboker/hb-v830-nasjonalt-vegreferansesystem.pdf )
+
+User manual for downloading and using NVDB speed limits. Some of the quirks related to speed limits aren't applicable to toll stations, but otherwise the info is relevant [How can you get Norwegian speed limit data?
+](https://github.com/LtGlahn/nvdbspeedlimit)
 
 Using the NPRA routing application data along with other data from NVDB api: [mappingRoute2NVDB](https://github.com/LtGlahn/ruteplan/blob/master/mappingRoute2nvdb.md)
