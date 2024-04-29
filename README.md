@@ -44,7 +44,7 @@ The attribute `routeid` is the unique link sequence ID in our road data base. To
 
 ### Downloading routing application data
 
-The newest NPRA routing application data can be downloaded from the FTP server ftp://vegvesen.hostedftp.com/~StatensVegvesen/vegnett/ , or alternatively from the [geonorge portal](./dowloading-from-geonorge-portal.md)
+The newest NPRA routing application data can be downloaded from the ~~FTP server~~  EDIT: FTP is no longer available, [download with this link](https://nedlasting.geonorge.no/geonorge/Samferdsel/NVDBRuteplanNettverksdatasett/SpatiaLite/Samferdsel_0000_Norge_25833_NVDBRuteplanNettverksdatasett_SpatiaLite.zip) or follow the instructions here [geonorge portal](./dowloading-from-geonorge-portal.md). We also include an python example of how to check the Atom feed XML for updates and only initiate download upon publication of fresh data. 
 
 The spatiaLite (sqlite) format is recommended, this is the one we use ourselves. It is eaily read into tools like [QGIS]() and [FME (feature Manipulation Engine)](https://safe.com), both of these can be used to transform into shape files (and a bunch of other formats), in your favorite coordinate system. Lots of other tools can be used for spatialite. Surprisingly, the spatiaLite support in Python has detoriated: It's doable, but fiddly.
 
