@@ -111,4 +111,4 @@ if __name__ == '__main__':
     # https://nedlasting2.geonorge.no/geonorge/ATOM-feeds/Elveg2-0_AtomFeedGML.xml 
     # 
     ## Routing application data converted to file geodatababase format
-    # https://nedlasting2.geonorge.no/geonorge/ATOM-feeds/NVDBRuteplanNettverksdatasett_AtomFeedSpatiaLite.xml 
+    # https://nedlasting2.geonorge.no/geonorge/ATOM-feeds/NVDBRuteplanNettverksdatasett_AtomFeedFGDB.xml 
