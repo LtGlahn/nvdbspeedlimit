@@ -102,6 +102,9 @@ if __name__ == '__main__':
 
     # URL to atom feed for NPRA routing application in spatialLite format 
     geonorgeAtomFeedUrl = 'https://nedlasting2.geonorge.no/geonorge/ATOM-feeds/NVDBRuteplanNettverksdatasett_AtomFeedSpatiaLite.xml'
+
+    # URL to atom feed for NPRA routing application in Esri file geodatabase FGDB format 
+    geonorgeAtomFeedUrl = 'https://nedlasting2.geonorge.no/geonorge/ATOM-feeds/NVDBRuteplanNettverksdatasett_AtomFeedFGDB.xml'
     timestampfile = 'lastgeonorgedownload.json'
     datafile = 'download.zip'
     atomfeed = getFreshData( geonorgeAtomFeedUrl, timestampfile=timestampfile, )
