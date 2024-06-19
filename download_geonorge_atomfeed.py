@@ -91,7 +91,7 @@ def getFreshData( geonorgeAtomFeedUrl:str, timestampfile='lastgeonorgedownload.j
             writeLastDownload( timestampfile, lastUpdated, link)
 
         else: 
-            print( f"Last download {lastDownload} >= {lastUpdated} geonorge atom feed time stamp, NOT downloading")
+            print( f"Last download {lastDownload} >= {lastUpdated} geonorge atom feed time stamp, NOT downloading\n{geonorgeAtomFeedUrl}")
 
     else: 
         print( f"Can't access download link: HTTP {r.status_code} {r.text[0:200]} {geonorgeAtomFeedUrl}")
@@ -104,7 +104,7 @@ if __name__ == '__main__':
     geonorgeAtomFeedUrl = 'https://nedlasting2.geonorge.no/geonorge/ATOM-feeds/NVDBRuteplanNettverksdatasett_AtomFeedSpatiaLite.xml'
 
     # URL to atom feed for NPRA routing application in Esri file geodatabase FGDB format 
-    geonorgeAtomFeedUrl = 'https://nedlasting2.geonorge.no/geonorge/ATOM-feeds/NVDBRuteplanNettverksdatasett_AtomFeedFGDB.xml'
+    # geonorgeAtomFeedUrl = 'https://nedlasting2.geonorge.no/geonorge/ATOM-feeds/NVDBRuteplanNettverksdatasett_AtomFeedFGDB.xml'
     timestampfile = 'lastgeonorgedownload.json'
     datafile = 'download.zip'
     atomfeed = getFreshData( geonorgeAtomFeedUrl, timestampfile=timestampfile, )
